@@ -1,21 +1,9 @@
-body {
-  font-family: "Roboto", sans-serif;
-  color: rgb(10%, 10%, 10%);
-  background: darken(white, 0.2);
-  margin: 50px;
-}
-
-
-:fullscreen a {
-    display: flex
-}
-
-$fontcolor:  rgb(10%, 10%, 10%);
-$backgroundcolor: rgb(98%, 98%, 98%);
+$fontcolor:  black;
+$backgroundcolor: lightgrey;
 
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Cinzel", serif;
   color: $fontcolor;
   background-color: $backgroundcolor;
   margin: 50px;
@@ -23,27 +11,36 @@ body {
 
 
 #search-bar {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
   input {
-    font-size: 1.5em;
+    font-size: 2em;
     border-radius: .25em;
+    border-color: black;
   }
 }
 
+#title {
+  font-size: 30px;
+}
+#description {
+  font: 20px;
+}
 
 #video-section {
   display: flex;
 
   li {
+    display: flex;
+    flex-flow: row nowrap;
     list-style: none;
     cursor: pointer;
-    display: flex;
-    width: 25vw;
+    width: 500vw;
     padding: 10px;
   }
   li:hover {
-    background: darken( $backgroundcolor, 10% );
+    background: darken( $backgroundcolor, 20% );
+    color: white;
   }
 
 }
