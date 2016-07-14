@@ -1,9 +1,6 @@
-// es6 import style
-// import $ from 'jquery';
 import debounce from 'lodash.debounce';
 import './style.scss';
 import React, { Component } from 'react';
-// import React from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar';
 import youtubeSearch from './youtube-api';
@@ -33,9 +30,10 @@ class App extends Component {
     return (
       <div>
         <SearchBar onSearchChange={text => this.search(text)} />
-        <div id="video-section"><VideoDetail video={this.state.selectedVideo} /></div>
-        // <VideoList videos={this.state.videos} />
-        <div id="video-section"><VideoList onVideoSelect={selectedVideo => this.setState({ selectedVideo })} videos={this.state.videos} /></div>
+        <div id="video-section">
+          <div><VideoDetail video={this.state.selectedVideo} /></div>
+          <div><VideoList onVideoSelect={selectedVideo => this.setState({ selectedVideo })} videos={this.state.videos} /></div>
+        </div>
       </div>
     );
   }

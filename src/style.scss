@@ -1,23 +1,44 @@
 $fontcolor:  black;
-$backgroundcolor: lightgrey;
+$backgroundcolor: white;
 
 
 body {
-  font-family: "Cinzel", serif;
+  font-family: "Roboto", sans-serif;
   color: $fontcolor;
   background-color: $backgroundcolor;
   margin: 50px;
 }
 
+#logo {
+  display: flex;
+  padding-left: 350px;
+}
 
 #search-bar {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 
   input {
-    font-size: 2em;
+    font-size: 1.5em;
     border-radius: .25em;
-    border-color: black;
   }
+}
+
+#video-section {
+  display: flex;
+
+  li {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    width: 25vw;
+    padding: 10px;
+  }
+
+  li:hover {
+    background: darken( $backgroundcolor, 30% );
+    color: blue;
+  }
+
 }
 
 #title {
@@ -25,22 +46,4 @@ body {
 }
 #description {
   font: 20px;
-}
-
-#video-section {
-  display: flex;
-
-  li {
-    display: flex;
-    flex-flow: row nowrap;
-    list-style: none;
-    cursor: pointer;
-    width: 500vw;
-    padding: 10px;
-  }
-  li:hover {
-    background: darken( $backgroundcolor, 20% );
-    color: white;
-  }
-
 }
